@@ -8,6 +8,6 @@
 </head>
 <body>
     <h3>这里是应用的首页对应web.xml中对应的welcome-file-list配置</h3>
-    <h4>尝试发送/spring.do 测试SpringMVC是否搭建成功!</h4>
+    <h4>尝试发送/web/spring.do 测试SpringMVC是否搭建成功!</h4>
 </body>
 </html>
