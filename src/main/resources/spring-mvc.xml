@@ -4,9 +4,23 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns:p="http://www.springframework.org/schema/p"	
 xmlns:context="http://www.springframework.org/schema/context" 
 xmlns:mvc="http://www.springframework.org/schema/mvc"
-xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd	http://www.springframework.org/schema/context	http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd"
-default-lazy-init="true">
-
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+    http://www.springframework.org/schema/mvc 
+    http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+    default-lazy-init="true">
+    
+    <!-- 激活@Controller模式 -->
+    <mvc:annotation-driven/>
+    <!-- 代表不对静态资源如css.js.html等进行拦截 -->
+    <mvc:default-servlet-handler />
+    <mvc:resources location="/views/" mapping="/views/**"/>
+    <mvc:resources location="/js/" mapping="/js/**"/> 
 	<!-- 启动事务添加配置 -->
     <context:component-scan base-package="tk.ljyuan71">  
         <!-- 排除扫描service标签 -->

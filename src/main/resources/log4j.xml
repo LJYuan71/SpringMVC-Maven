@@ -31,7 +31,7 @@
             <param name="AcceptOnMatch" value="true" />
         </filter>     
     </appender> 
-     
+     <!-- spring框架日志级别控制 -->
     <logger name="org.springframework" additivity="false">
         <level value="warn" />
         <appender-ref ref="stdout" />
@@ -41,17 +41,13 @@
         <level value="warn" />
         <appender-ref ref="stdout" />
     </logger>
+    
     <!-- 对阿里druid输出日志的控制 -->
     <logger name="com.alibaba.druid" additivity="false">
         <level value="DEBUG" />
         <appender-ref ref="stdout" />
     </logger>
     
-    <!-- 对activexAppender的输出屏蔽指定包日志
-    <logger name="us.codecraft" additivity="false">     
-        <level value="WARN" />     
-    </logger>
-    	-->
     <root>
         <priority value="DEBUG" />
         <appender-ref ref="stdout" />
