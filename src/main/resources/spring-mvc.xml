@@ -62,6 +62,7 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
         </property>
     </bean>
     <!-- 视图解析器  当Controller返回一个ModelAndView时，配置的jsp解析将其中的view路径添加前缀和后缀-->
+	<!-- 为了安全，WEB-INF下的jsp是不对外可见的，只能forward能访问到。如果不是为了安全，则不需要放置在WEB-INF下 -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
 		<property name="prefix" value="/WEB-INF/views/"/>
