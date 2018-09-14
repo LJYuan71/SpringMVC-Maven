@@ -14,7 +14,7 @@
 	<!-- 输出到日志文件 每天一个日志[可配其他间隔时间]  --> 
     <appender name="activexAppender" class="org.apache.log4j.DailyRollingFileAppender">       
     	<!-- 设置日志文件路径及名称 -->
-        <param name="File" value="E:/logs/SpringMVC/SpringMVC-Maven.log" />         
+        <param name="File" value="D:/logs/SpringMVC/SpringMVC-Maven.log" />         
         <!-- 根据值中yyyy-MM-dd为每日，yyyy-MM为每月，yyyy-ww为每周等格式滚动一次日志文件
 		前一次文件命名为：spiderDaily.log.yyyy-MM-dd.log,今日日志文件命名为：spiderDaily.log -->
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'" /> 

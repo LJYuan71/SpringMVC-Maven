@@ -1,0 +1,12 @@
+package ${package_name}.${module}.service;
+
+import ${package_name}.${module}.model.${model};
+import ${package_name}.${module}.model.${model}Example;
+import tk.ljyuan71.common.util.BaseService;
+
+/**
+* ${model}Service接口
+*/
+public interface ${model}Service extends BaseService<${model}, ${model}Example> {
+
+}
